@@ -114,7 +114,8 @@ public class ResizingSurfaceView extends SurfaceView implements ClearableSurface
 
     // This is purposefully true to support older devices (below API 21) which
     // isn't needed by the ResizingTextureView (which is false be default)
-    protected boolean measureBasedOnAspectRatio = Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP;
+    // TODO: Set back to true as temporary solution. Not sure I understand the original intent here.
+    protected boolean measureBasedOnAspectRatio = true; //Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP;
 
     public ResizingSurfaceView(Context context) {
         super(context);
